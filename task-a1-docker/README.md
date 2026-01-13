@@ -30,8 +30,9 @@ curl http://localhost:8080
 Контейнер запущен на порту 8080
 
 Веб-страница доступна по http://localhost:8080
-
+```
 ### 5. Docker Compose
+
 version: '3.8'
 services:
   web:
@@ -40,6 +41,7 @@ services:
     ports:
       - "8081:80"
     restart: unless-stopped
+    
 ### 7. Docker Compose запуск
 ```bash
 # Запуск
