@@ -39,7 +39,25 @@ git commit --amend -m "Feature: реализована новая функцио
 ```
 ### Полезные команды stash
 ```bash
+# Просмотр всех stash
+git stash list
+
+# Просмотр содержимого конкретного stash
+git stash show stash@{0}
+git stash show -p stash@{0}  # Подробный diff
+
+# Создание stash с игнорированием .gitignore
+git stash push --all
+
+# Создание stash только отслеживаемых файлов (без новых)
+git stash push --keep-index
+
+# Удаление stash
+git stash drop stash@{0}
+git stash clear  # Удалить все
+```
 # Вместо stash можно сделать временный коммит
+```bash
 git add .
 git commit -m "WIP: временное сохранение"
 
