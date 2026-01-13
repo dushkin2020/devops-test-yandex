@@ -31,7 +31,7 @@ curl http://localhost:8080
 
 Веб-страница доступна по http://localhost:8080
 
-5. Docker Compose
+### 5. Docker Compose
 version: '3.8'
 services:
   web:
