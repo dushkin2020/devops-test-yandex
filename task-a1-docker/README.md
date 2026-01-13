@@ -52,4 +52,19 @@ curl http://localhost:8081
 
 # Или в браузере
 http://localhost:8081
+```
+### 7.	Вопрос для размышления: Как можно доставить твой index.html в контейнер, не пересобирая образ?
+
+Есть несколько способов доставить index.html без пересборки образа:
+```bash
+1. **Volume Mount (рекомендуется для разработки):**
+   ```bash
+   docker run -v ./index.html:/usr/share/nginx/html/index.html -p 8080:80 nginx:alpine
+Файл монтируется с хоста, изменения видны сразу.
+2. **Bind Mount (более гибкий):**
+   ```bash
+   docker run --mount type=bind,source=./index.html,target=/usr/share/nginx/html/index.html -p 8080:80 nginx:alpine
+   
+   Отличие от Volume: Можно контролировать тип монтирования (read-only, read-write)
+На практике чаще всего используют Volume Mount — простой и эффективный способ обновлять контент без пересборки.
 
