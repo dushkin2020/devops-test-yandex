@@ -32,7 +32,7 @@ curl http://localhost:8080
 Веб-страница доступна по http://localhost:8080
 ```
 ### 5. Docker Compose
-
+```bash
 version: '3.8'
 services:
   web:
@@ -43,7 +43,7 @@ services:
     restart: unless-stopped
     
 ### 7. Docker Compose запуск
-```bash
+
 # Запуск
 docker-compose up -d
 
