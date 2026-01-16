@@ -1,5 +1,4 @@
-# DevOps практические задания
-
+# DevOps практические задания !!!
 ## Содержание
 1. [Задание A1: Docker веб-приложение](task-a1-docker/README.md)
 2. [Задание B1: Bash скрипт](task-b1-bash/README.md)
